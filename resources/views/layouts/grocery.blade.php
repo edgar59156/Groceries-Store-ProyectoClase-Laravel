@@ -219,6 +219,7 @@
     <script type="text/javascript" src="{{asset('assets/packages/thumbelina/thumbelina.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/packages/bootstrap-touchspin/bootstrap-touchspin.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/theme.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/myscript.js')}}"></script>
     @yield('js')
 
 </body>

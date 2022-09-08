@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\EmployeesController;
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\JsonController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
+use Nette\Utils\Json;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,4 +68,11 @@ Route::post('/admin/products/update/{id}', [ProductController::class, 'update'])
 
 Route::delete('/admin/products/destroy/{id}', [ProductController::class, 'destroy'])->name('destroy_product');
 
+Route::get('/json1', [JsonController::class,'json1'])->name('json1');
+
+Route::get('/json2', [JsonController::class,'products'])->name('json2');
+Route::get('/json_products', [JsonController::class,'products_list'])->name('product_list');
+Route::get('/json_products2', [JsonController::class,'products_list'])->name('datatable');
+
+Route::get('/employees_list', [EmployeesController::class,'index'])->name('employees');
 
